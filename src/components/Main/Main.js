@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const SERVER_URL = process.env.REACT_APP_SERVER_URL;
-const MARVEL_PRIVATE_KEY = process.env.REACT_APP_MARVEL_PRIVATE_KEY;
-const MARVEL_PUBLIC_KEY = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
+//const MARVEL_PRIVATE_KEY = process.env.REACT_APP_MARVEL_PRIVATE_KEY;
+//const MARVEL_PUBLIC_KEY = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
+//const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Main () {
   
@@ -45,7 +45,7 @@ function Main () {
     };
     getApi();
 
-  },[]);
+  },[url]);
 
   return (
     <main className="main">
