@@ -24,3 +24,6 @@ Hace una petición a la API de pokemon y la guarda en mi BDD.
     * Nombre de la tabla.
 * Guardarlo en un fichero JSON para poder importarlo desde MongoDB.
 * Cualquier tipo de sugerencia, mejora....
+
+## App desplegada en:
+https://dashing-longma-e2f21f.netlify.app/

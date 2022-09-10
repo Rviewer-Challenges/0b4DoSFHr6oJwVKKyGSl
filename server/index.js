@@ -16,11 +16,11 @@ app.use(logger('dev'));
 
 const PORT = process.env.LOCAL_PORT || 8080;
 
-//app.use(cors());
-app.use(cors({
+app.use(cors());
+/* app.use(cors({
   origin: "http://localhost:3000" || "http://localhost:5000", // <-- location of the react app were connection to
   credentials: false
-}));
+})); */
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
