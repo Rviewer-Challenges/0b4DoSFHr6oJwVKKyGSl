@@ -3,28 +3,27 @@ const mongoose = require ('mongoose');
 
 createSchema = async (data) => {
     console.log("CreateSchema!!");
-    console.log(data);
-    //let newArray = Object.keys(data[0]);
-    let newArray = Object.keys(data[0]);
-    console.log(newArray);
-    //let newArray = Object.keys(data);
+    let tabla = "";
+    if (data.tabla) { tabla = data.tabla.toLowerCase().replace(/\s+/g, '')}
+    
+    let newArray = Object.keys(data.resultado.results[0]);
+    
     const newSchema = new mongoose.Schema();
+    
     let temp = {};
-
     newArray.map((key) => {
         temp[key] = {};
     });
 
     newSchema.add(temp);
+    if (!tabla) return;
     try{
-        let berria = mongoose.model('post', newSchema);
+        let berria = mongoose.model(tabla, newSchema);
         return berria;
     } catch (err){
         console.log(err);
         return err;
     }
-    
-//    return berria;
 };
 
 module.exports = createSchema;
